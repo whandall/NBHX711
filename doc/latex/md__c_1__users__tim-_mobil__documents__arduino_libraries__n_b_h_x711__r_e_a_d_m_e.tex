@@ -1,0 +1,57 @@
+Copyright (c) 2017 Whandall (\href{mailto:whandall@gmx.de}{\tt whandall@gmx.\+de}), released under the M\+IT license. See the L\+I\+C\+E\+N\+SE file for licensing details.
+
+A little more advanced Arduino driver for the H\+X711 A\+DC.
+
+The H\+X711 is a low-\/cost strain gauge amplifier produced by Avia Semiconductor.
+
+The H\+X711 communicates with a non-\/i2c compliant two wire protocol.
+
+This library provides the code required to use an Arduino, the H\+X711 module and a strain gauge load cell to build a scale, force gauge or other pressure or force sensitive projects.
+
+The library has a single class, {\bfseries \hyperlink{class_n_b_h_x711}{N\+B\+H\+X711}} with some functions.
+
+Readings will be gathered when available via the update function, making the whole process non-\/blocking
+
+\subsection*{Class}
+
+The {\bfseries \hyperlink{class_n_b_h_x711}{N\+B\+H\+X711}} class takes four parameters on construction, the depth of the sample buffer, the pin to use for data (output), the pin to use to signal readiness (clock) and an optional gain/channel.
+
+\subsection*{Functions}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Function }&\textbf{ Description  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Function }&\textbf{ Description  }\\\cline{1-2}
+\endhead
+$\ast$$\ast$begin$\ast$$\ast$ &Sets up the hardware \\\cline{1-2}
+$\ast$$\ast$read$\ast$$\ast$ &Returns a long integer that is the current value of the H\+X711. \\\cline{1-2}
+$\ast$$\ast$update$\ast$$\ast$ &Checks for new sample, if available read it into the sample buffer. \\\cline{1-2}
+\end{longtabu}
+\subsection*{Example}
+
+Here is a simple example of using the H\+X711 on pins A2 and A3 to read a strain gauge and print it\textquotesingle{}s current value\+:
+
+
+\begin{DoxyCode}
+\{c++\}
+#include <Q2HX711.h>
+NBHX711 hx711(A2, A3);
+void setup() \{
+  Serial.begin(9600);
+\}
+
+void loop() \{
+  static unsigned long lastRead;
+  hx711.update();
+  if (millis() - lastRead >= 500) \{
+    lastRead = millis();
+    Serial.println(hx711.read());
+  \}
+\}
+\end{DoxyCode}
+ 

@@ -1,0 +1,412 @@
+\hypertarget{class_n_b_h_x711}{}\section{N\+B\+H\+X711 Class Reference}
+\label{class_n_b_h_x711}\index{N\+B\+H\+X711@{N\+B\+H\+X711}}
+
+
+the main H\+X711 class  
+
+
+
+
+{\ttfamily \#include $<$N\+B\+H\+X711.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_b_h_x711_ad23a6432bb4615da5d77433c7b5028be}{N\+B\+H\+X711} (byte dout, byte pd\+\_\+sck, byte depth=12, byte gain=\hyperlink{_n_b_h_x711_8h_aed3330beebe77c0cd49207584f624d86a622bf1aeb6d57be63f86d39c8bfd53e1}{Ch\+A128})
+\item 
+\hyperlink{class_n_b_h_x711_a06c87d88b558598e1c5c5bbbe605884d}{$\sim$\+N\+B\+H\+X711} ()
+\item 
+void \hyperlink{class_n_b_h_x711_a447f1e82576e7f5fcf4e5f71c4edf9ce}{begin} ()
+\item 
+byte \hyperlink{class_n_b_h_x711_ae12eee691226d1ba83a97bf7562f9847}{get\+Hist\+Size} ()
+\item 
+void \hyperlink{class_n_b_h_x711_a802d60de582161056e577b4c6d32ba53}{set\+Gain\+And\+Channel} (byte gain=\hyperlink{_n_b_h_x711_8h_aed3330beebe77c0cd49207584f624d86a622bf1aeb6d57be63f86d39c8bfd53e1}{Ch\+A128})
+\item 
+bool \hyperlink{class_n_b_h_x711_a30b9658963785c0dfd3ad490111d1180}{update} ()
+\item 
+long \hyperlink{class_n_b_h_x711_a4df2657394217ebe09eafb1b843124ed}{get\+Raw} ()
+\item 
+long \hyperlink{class_n_b_h_x711_ac1f2090347e4f56911cf9d8aae81b8f1}{read\+Average} (byte times=10)
+\item 
+long \hyperlink{class_n_b_h_x711_aeca589479761846f5e96343dd7251578}{get\+Value} (byte times=1)
+\item 
+float \hyperlink{class_n_b_h_x711_a48ff4a2c0b428911a850f6c2bea833f3}{get\+Units} (byte times=1)
+\item 
+void \hyperlink{class_n_b_h_x711_a130b9daba88bb002cd4a6d4591105c71}{tare} (byte times=10)
+\item 
+void \hyperlink{class_n_b_h_x711_a272ff1fb4222e86f0561ad3d55a6ce28}{set\+Scale} (float scale=1.\+0)
+\item 
+float \hyperlink{class_n_b_h_x711_a078dafd360269e0505239ba465cc6920}{get\+Scale} ()
+\item 
+void \hyperlink{class_n_b_h_x711_abb5f2f5ecf96f5cfc19fc0a96ea95b6c}{set\+Offset} (long \hyperlink{class_n_b_h_x711_a2deeadef7a2a07b0f5d799d2b0be13c2}{offset}=0)
+\item 
+long \hyperlink{class_n_b_h_x711_a415f456a258312956e4b044bc4623190}{get\+Offset} ()
+\item 
+void \hyperlink{class_n_b_h_x711_ae531f57831caddf1d06d25f058066098}{power\+Down} ()
+\item 
+void \hyperlink{class_n_b_h_x711_aeeefc08264440e1d0ef11d592f96ef68}{power\+Up} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_n_b_h_x711_a97a82159c3ffd2314c94bf0905703eac}{is\+Ready} ()
+\item 
+long \hyperlink{class_n_b_h_x711_a260b87b30eb3061c37a11a2ec35730f8}{cvt24} (byte $\ast$from)
+\item 
+void \hyperlink{class_n_b_h_x711_a54531c0c1d287f530ef450783dcf7738}{get\+Data} (byte $\ast$store\+To)
+\item 
+byte \hyperlink{class_n_b_h_x711_ac47ea6ff71062c44ef90737a72b3bb1d}{back\+Index} (byte times)
+\item 
+byte \hyperlink{class_n_b_h_x711_a05ef1302bf8ffd0dfcafe3120c9be835}{next\+Index} (byte index)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+byte \hyperlink{class_n_b_h_x711_a39f8eb80ac3420751d5ffc1d9f3df921}{gain\+Code}
+\begin{DoxyCompactList}\small\item\em selects gain and channel \end{DoxyCompactList}\item 
+long \hyperlink{class_n_b_h_x711_a2deeadef7a2a07b0f5d799d2b0be13c2}{offset}
+\begin{DoxyCompactList}\small\item\em baseline value for tare weight \end{DoxyCompactList}\item 
+float \hyperlink{class_n_b_h_x711_a66c39708e8529ec8a510cea042d81dd1}{scale\+Factor}
+\begin{DoxyCompactList}\small\item\em factor to convert reading to units \end{DoxyCompactList}\item 
+byte \hyperlink{class_n_b_h_x711_a9778cd777788b90d4aa8efb78cf4afc8}{hist\+Size}
+\begin{DoxyCompactList}\small\item\em size of history buffer \end{DoxyCompactList}\item 
+byte $\ast$ \hyperlink{class_n_b_h_x711_a25db401ce2ec1944b1a1b6178ac9b537}{hist\+Buffer}
+\begin{DoxyCompactList}\small\item\em the history buffer \end{DoxyCompactList}\item 
+byte \hyperlink{class_n_b_h_x711_a6b89562f95840002b94a0ae8f8fb6530}{curr}
+\begin{DoxyCompactList}\small\item\em pointer to current reading \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+byte \hyperlink{class_n_b_h_x711_a3e4bfa7378e1203fb172b1d53da31073}{data\+Pin}
+\begin{DoxyCompactList}\small\item\em data comes in on this pin \end{DoxyCompactList}\item 
+byte \hyperlink{class_n_b_h_x711_a1edd07d22e36984a252b4555a9d3ce0b}{clock\+Pin}
+\begin{DoxyCompactList}\small\item\em serial clock and power down control \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the main H\+X711 class 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_n_b_h_x711_ad23a6432bb4615da5d77433c7b5028be}\label{class_n_b_h_x711_ad23a6432bb4615da5d77433c7b5028be}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{N\+B\+H\+X711()}{NBHX711()}}
+{\footnotesize\ttfamily N\+B\+H\+X711\+::\+N\+B\+H\+X711 (\begin{DoxyParamCaption}\item[{byte}]{dout,  }\item[{byte}]{pd\+\_\+sck,  }\item[{byte}]{depth = {\ttfamily 12},  }\item[{byte}]{gain = {\ttfamily \hyperlink{_n_b_h_x711_8h_aed3330beebe77c0cd49207584f624d86a622bf1aeb6d57be63f86d39c8bfd53e1}{Ch\+A128}} }\end{DoxyParamCaption})}
+
+constructor set up variables and allocate history buffer 
+\begin{DoxyParams}{Parameters}
+{\em dout} & \mbox{[}in\mbox{]} data pin \\
+\hline
+{\em pd\+\_\+sck} & \mbox{[}in\mbox{]} clock pin, used also to set channel and gain via additional pulses \\
+\hline
+{\em depth} & \mbox{[}in\mbox{]} depth of cyclic history buffer \\
+\hline
+{\em gain} & \mbox{[}in\mbox{]} selected gain and channel, default A-\/128 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_n_b_h_x711_a06c87d88b558598e1c5c5bbbe605884d}\label{class_n_b_h_x711_a06c87d88b558598e1c5c5bbbe605884d}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!````~N\+B\+H\+X711@{$\sim$\+N\+B\+H\+X711}}
+\index{````~N\+B\+H\+X711@{$\sim$\+N\+B\+H\+X711}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{$\sim$\+N\+B\+H\+X711()}{~NBHX711()}}
+{\footnotesize\ttfamily N\+B\+H\+X711\+::$\sim$\+N\+B\+H\+X711 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+destructor free history buffer, release output port 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_n_b_h_x711_ac47ea6ff71062c44ef90737a72b3bb1d}\label{class_n_b_h_x711_ac47ea6ff71062c44ef90737a72b3bb1d}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!back\+Index@{back\+Index}}
+\index{back\+Index@{back\+Index}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{back\+Index()}{backIndex()}}
+{\footnotesize\ttfamily byte N\+B\+H\+X711\+::back\+Index (\begin{DoxyParamCaption}\item[{byte}]{times }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+utility function 
+\begin{DoxyParams}{Parameters}
+{\em times} & \mbox{[}in\mbox{]} number of history elements \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index of curr -\/ (times -\/ 1) elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_b_h_x711_a447f1e82576e7f5fcf4e5f71c4edf9ce}\label{class_n_b_h_x711_a447f1e82576e7f5fcf4e5f71c4edf9ce}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!begin@{begin}}
+\index{begin@{begin}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void N\+B\+H\+X711\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+set pinmode \mbox{\Hypertarget{class_n_b_h_x711_a260b87b30eb3061c37a11a2ec35730f8}\label{class_n_b_h_x711_a260b87b30eb3061c37a11a2ec35730f8}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!cvt24@{cvt24}}
+\index{cvt24@{cvt24}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{cvt24()}{cvt24()}}
+{\footnotesize\ttfamily long N\+B\+H\+X711\+::cvt24 (\begin{DoxyParamCaption}\item[{byte $\ast$}]{from }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+conversion function convert 3 byte signed value to signed 32 bit long 
+\begin{DoxyParams}{Parameters}
+{\em from} & \mbox{[}in\mbox{]} pointer to little endian 24 bit value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+32 bit signed long 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_b_h_x711_a54531c0c1d287f530ef450783dcf7738}\label{class_n_b_h_x711_a54531c0c1d287f530ef450783dcf7738}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{get\+Data()}{getData()}}
+{\footnotesize\ttfamily void N\+B\+H\+X711\+::get\+Data (\begin{DoxyParamCaption}\item[{byte $\ast$}]{store\+To }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+access function read 3 byte signed value to passed buffer 
+\begin{DoxyParams}{Parameters}
+{\em store\+To} & \mbox{[}in\mbox{]} pointer to little endian 24 bit value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_n_b_h_x711_ae12eee691226d1ba83a97bf7562f9847}\label{class_n_b_h_x711_ae12eee691226d1ba83a97bf7562f9847}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!get\+Hist\+Size@{get\+Hist\+Size}}
+\index{get\+Hist\+Size@{get\+Hist\+Size}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{get\+Hist\+Size()}{getHistSize()}}
+{\footnotesize\ttfamily byte N\+B\+H\+X711\+::get\+Hist\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+utility function \begin{DoxyReturn}{Returns}
+depth of history buffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_b_h_x711_a415f456a258312956e4b044bc4623190}\label{class_n_b_h_x711_a415f456a258312956e4b044bc4623190}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!get\+Offset@{get\+Offset}}
+\index{get\+Offset@{get\+Offset}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{get\+Offset()}{getOffset()}}
+{\footnotesize\ttfamily long N\+B\+H\+X711\+::get\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the offset \begin{DoxyReturn}{Returns}
+offset value for readings 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_b_h_x711_a4df2657394217ebe09eafb1b843124ed}\label{class_n_b_h_x711_a4df2657394217ebe09eafb1b843124ed}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!get\+Raw@{get\+Raw}}
+\index{get\+Raw@{get\+Raw}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{get\+Raw()}{getRaw()}}
+{\footnotesize\ttfamily long N\+B\+H\+X711\+::get\+Raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the raw H\+X711 output \begin{DoxyReturn}{Returns}
+most current reading 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_b_h_x711_a078dafd360269e0505239ba465cc6920}\label{class_n_b_h_x711_a078dafd360269e0505239ba465cc6920}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!get\+Scale@{get\+Scale}}
+\index{get\+Scale@{get\+Scale}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{get\+Scale()}{getScale()}}
+{\footnotesize\ttfamily float N\+B\+H\+X711\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the conversion factor to map readings to gram or whatever unit is wished \begin{DoxyReturn}{Returns}
+value to divide reading by 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_b_h_x711_a48ff4a2c0b428911a850f6c2bea833f3}\label{class_n_b_h_x711_a48ff4a2c0b428911a850f6c2bea833f3}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!get\+Units@{get\+Units}}
+\index{get\+Units@{get\+Units}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{get\+Units()}{getUnits()}}
+{\footnotesize\ttfamily float N\+B\+H\+X711\+::get\+Units (\begin{DoxyParamCaption}\item[{byte}]{times = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+scale relative average to units via scale\+Factor 
+\begin{DoxyParams}{Parameters}
+{\em times} & \mbox{[}in\mbox{]} number of history elements to process \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+get\+Value(times) divided by scale\+Factor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_b_h_x711_aeca589479761846f5e96343dd7251578}\label{class_n_b_h_x711_aeca589479761846f5e96343dd7251578}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily long N\+B\+H\+X711\+::get\+Value (\begin{DoxyParamCaption}\item[{byte}]{times = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+compute relative average 
+\begin{DoxyParams}{Parameters}
+{\em times} & \mbox{[}in\mbox{]} number of history elements to process \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+read\+Average(times) minus offset 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_b_h_x711_a97a82159c3ffd2314c94bf0905703eac}\label{class_n_b_h_x711_a97a82159c3ffd2314c94bf0905703eac}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!is\+Ready@{is\+Ready}}
+\index{is\+Ready@{is\+Ready}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{is\+Ready()}{isReady()}}
+{\footnotesize\ttfamily bool N\+B\+H\+X711\+::is\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+available data is signaled by the H\+X711 via L\+OW on data\+Pin \mbox{\Hypertarget{class_n_b_h_x711_a05ef1302bf8ffd0dfcafe3120c9be835}\label{class_n_b_h_x711_a05ef1302bf8ffd0dfcafe3120c9be835}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!next\+Index@{next\+Index}}
+\index{next\+Index@{next\+Index}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{next\+Index()}{nextIndex()}}
+{\footnotesize\ttfamily byte N\+B\+H\+X711\+::next\+Index (\begin{DoxyParamCaption}\item[{byte}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+utility function 
+\begin{DoxyParams}{Parameters}
+{\em index} & \mbox{[}in\mbox{]} index of history element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index of index + 1 element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_b_h_x711_ae531f57831caddf1d06d25f058066098}\label{class_n_b_h_x711_ae531f57831caddf1d06d25f058066098}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!power\+Down@{power\+Down}}
+\index{power\+Down@{power\+Down}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{power\+Down()}{powerDown()}}
+{\footnotesize\ttfamily void N\+B\+H\+X711\+::power\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+set the clock pin to H\+I\+GH, which sends the H\+X711 into power down after 50 µs \mbox{\Hypertarget{class_n_b_h_x711_aeeefc08264440e1d0ef11d592f96ef68}\label{class_n_b_h_x711_aeeefc08264440e1d0ef11d592f96ef68}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!power\+Up@{power\+Up}}
+\index{power\+Up@{power\+Up}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{power\+Up()}{powerUp()}}
+{\footnotesize\ttfamily void N\+B\+H\+X711\+::power\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+set the clock pin to L\+OW, which starts the H\+X711 from power, it could take 300 ms for next reading \mbox{\Hypertarget{class_n_b_h_x711_ac1f2090347e4f56911cf9d8aae81b8f1}\label{class_n_b_h_x711_ac1f2090347e4f56911cf9d8aae81b8f1}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!read\+Average@{read\+Average}}
+\index{read\+Average@{read\+Average}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{read\+Average()}{readAverage()}}
+{\footnotesize\ttfamily long N\+B\+H\+X711\+::read\+Average (\begin{DoxyParamCaption}\item[{byte}]{times = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+get the arithmetic mean of the last times raw H\+X711 outputs 
+\begin{DoxyParams}{Parameters}
+{\em times} & \mbox{[}in\mbox{]} number of history elements to process \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+arithmetic mean of the last times raw H\+X711 outputs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_b_h_x711_a802d60de582161056e577b4c6d32ba53}\label{class_n_b_h_x711_a802d60de582161056e577b4c6d32ba53}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!set\+Gain\+And\+Channel@{set\+Gain\+And\+Channel}}
+\index{set\+Gain\+And\+Channel@{set\+Gain\+And\+Channel}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{set\+Gain\+And\+Channel()}{setGainAndChannel()}}
+{\footnotesize\ttfamily void N\+B\+H\+X711\+::set\+Gain\+And\+Channel (\begin{DoxyParamCaption}\item[{byte}]{gain = {\ttfamily \hyperlink{_n_b_h_x711_8h_aed3330beebe77c0cd49207584f624d86a622bf1aeb6d57be63f86d39c8bfd53e1}{Ch\+A128}} }\end{DoxyParamCaption})}
+
+utility function 
+\begin{DoxyParams}{Parameters}
+{\em gain} & \mbox{[}in\mbox{]} selected gain and channel, default A-\/128 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_n_b_h_x711_abb5f2f5ecf96f5cfc19fc0a96ea95b6c}\label{class_n_b_h_x711_abb5f2f5ecf96f5cfc19fc0a96ea95b6c}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!set\+Offset@{set\+Offset}}
+\index{set\+Offset@{set\+Offset}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{set\+Offset()}{setOffset()}}
+{\footnotesize\ttfamily void N\+B\+H\+X711\+::set\+Offset (\begin{DoxyParamCaption}\item[{long}]{offset = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+set the offset 
+\begin{DoxyParams}{Parameters}
+{\em offset} & \mbox{[}in\mbox{]} offset value for readings \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_n_b_h_x711_a272ff1fb4222e86f0561ad3d55a6ce28}\label{class_n_b_h_x711_a272ff1fb4222e86f0561ad3d55a6ce28}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!set\+Scale@{set\+Scale}}
+\index{set\+Scale@{set\+Scale}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{set\+Scale()}{setScale()}}
+{\footnotesize\ttfamily void N\+B\+H\+X711\+::set\+Scale (\begin{DoxyParamCaption}\item[{float}]{scale = {\ttfamily 1.0} }\end{DoxyParamCaption})}
+
+set the conversion factor to map readings to gram or whatever unit is wished 
+\begin{DoxyParams}{Parameters}
+{\em scale} & \mbox{[}in\mbox{]} value to divide reading by \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_n_b_h_x711_a130b9daba88bb002cd4a6d4591105c71}\label{class_n_b_h_x711_a130b9daba88bb002cd4a6d4591105c71}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!tare@{tare}}
+\index{tare@{tare}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{tare()}{tare()}}
+{\footnotesize\ttfamily void N\+B\+H\+X711\+::tare (\begin{DoxyParamCaption}\item[{byte}]{times = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+make the current reading the offset 
+\begin{DoxyParams}{Parameters}
+{\em times} & \mbox{[}in\mbox{]} number of history elements to process \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_n_b_h_x711_a30b9658963785c0dfd3ad490111d1180}\label{class_n_b_h_x711_a30b9658963785c0dfd3ad490111d1180}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!update@{update}}
+\index{update@{update}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily bool N\+B\+H\+X711\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+check if new value available and put it to history buffer \begin{DoxyReturn}{Returns}
+true if value was read 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_n_b_h_x711_a1edd07d22e36984a252b4555a9d3ce0b}\label{class_n_b_h_x711_a1edd07d22e36984a252b4555a9d3ce0b}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!clock\+Pin@{clock\+Pin}}
+\index{clock\+Pin@{clock\+Pin}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{clock\+Pin}{clockPin}}
+{\footnotesize\ttfamily byte N\+B\+H\+X711\+::clock\+Pin\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+serial clock and power down control 
+
+\mbox{\Hypertarget{class_n_b_h_x711_a6b89562f95840002b94a0ae8f8fb6530}\label{class_n_b_h_x711_a6b89562f95840002b94a0ae8f8fb6530}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!curr@{curr}}
+\index{curr@{curr}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{curr}{curr}}
+{\footnotesize\ttfamily byte N\+B\+H\+X711\+::curr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+pointer to current reading 
+
+\mbox{\Hypertarget{class_n_b_h_x711_a3e4bfa7378e1203fb172b1d53da31073}\label{class_n_b_h_x711_a3e4bfa7378e1203fb172b1d53da31073}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!data\+Pin@{data\+Pin}}
+\index{data\+Pin@{data\+Pin}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{data\+Pin}{dataPin}}
+{\footnotesize\ttfamily byte N\+B\+H\+X711\+::data\+Pin\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+data comes in on this pin 
+
+\mbox{\Hypertarget{class_n_b_h_x711_a39f8eb80ac3420751d5ffc1d9f3df921}\label{class_n_b_h_x711_a39f8eb80ac3420751d5ffc1d9f3df921}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!gain\+Code@{gain\+Code}}
+\index{gain\+Code@{gain\+Code}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{gain\+Code}{gainCode}}
+{\footnotesize\ttfamily byte N\+B\+H\+X711\+::gain\+Code\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+selects gain and channel 
+
+\mbox{\Hypertarget{class_n_b_h_x711_a25db401ce2ec1944b1a1b6178ac9b537}\label{class_n_b_h_x711_a25db401ce2ec1944b1a1b6178ac9b537}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!hist\+Buffer@{hist\+Buffer}}
+\index{hist\+Buffer@{hist\+Buffer}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{hist\+Buffer}{histBuffer}}
+{\footnotesize\ttfamily byte$\ast$ N\+B\+H\+X711\+::hist\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the history buffer 
+
+\mbox{\Hypertarget{class_n_b_h_x711_a9778cd777788b90d4aa8efb78cf4afc8}\label{class_n_b_h_x711_a9778cd777788b90d4aa8efb78cf4afc8}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!hist\+Size@{hist\+Size}}
+\index{hist\+Size@{hist\+Size}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{hist\+Size}{histSize}}
+{\footnotesize\ttfamily byte N\+B\+H\+X711\+::hist\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+size of history buffer 
+
+\mbox{\Hypertarget{class_n_b_h_x711_a2deeadef7a2a07b0f5d799d2b0be13c2}\label{class_n_b_h_x711_a2deeadef7a2a07b0f5d799d2b0be13c2}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!offset@{offset}}
+\index{offset@{offset}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily long N\+B\+H\+X711\+::offset\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+baseline value for tare weight 
+
+\mbox{\Hypertarget{class_n_b_h_x711_a66c39708e8529ec8a510cea042d81dd1}\label{class_n_b_h_x711_a66c39708e8529ec8a510cea042d81dd1}} 
+\index{N\+B\+H\+X711@{N\+B\+H\+X711}!scale\+Factor@{scale\+Factor}}
+\index{scale\+Factor@{scale\+Factor}!N\+B\+H\+X711@{N\+B\+H\+X711}}
+\subsubsection{\texorpdfstring{scale\+Factor}{scaleFactor}}
+{\footnotesize\ttfamily float N\+B\+H\+X711\+::scale\+Factor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+factor to convert reading to units 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Tim-\/\+Mobil/\+Documents/\+Arduino/libraries/\+N\+B\+H\+X711/src/\hyperlink{_n_b_h_x711_8h}{N\+B\+H\+X711.\+h}\item 
+C\+:/\+Users/\+Tim-\/\+Mobil/\+Documents/\+Arduino/libraries/\+N\+B\+H\+X711/src/\hyperlink{_n_b_h_x711_8cpp}{N\+B\+H\+X711.\+cpp}\end{DoxyCompactItemize}
