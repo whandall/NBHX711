@@ -51,7 +51,7 @@ long NBHX711::getRaw() {
 	return cvt24(histBuffer + curr);
 }
 
-void NBHX711::getData(byte* storeTo) {
+void NBHX711::putData(byte* storeTo) {
 	// pulse the clock pin 24 times to read the data
 	storeTo[2] = shiftIn(dataPin, clockPin, MSBFIRST);
 	storeTo[1] = shiftIn(dataPin, clockPin, MSBFIRST);
@@ -79,7 +79,7 @@ bool NBHX711::update() {
 	if (isReady()) {
 		retVal = true;
 		curr = nextIndex(curr);
-		getData(histBuffer + curr);
+		putData(histBuffer + curr);
 	}
 	return retVal;
 }

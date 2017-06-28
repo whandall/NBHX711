@@ -78,7 +78,7 @@ protected:
  *	read 3 byte signed value to passed buffer
  *	@param storeTo [in] pointer to little endian 24 bit value
  */
-	void getData(byte* storeTo);
+	void putData(byte* storeTo);
 /**
  *	utility function
  *	@param times [in] number of history elements
