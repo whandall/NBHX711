@@ -1,11 +1,6 @@
 #include <Arduino.h>
 #include <NBHX711.h>
 
-#if ARDUINO_VERSION <= 106
-    // "yield" is not implemented in older Arduino Core releases-
-    void yield(void) {};
-#endif
-
 NBHX711::NBHX711(byte data, byte clock, byte depth, byte gain) : 
 	dataPin(data),
 	clockPin(clock),
