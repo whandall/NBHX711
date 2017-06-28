@@ -31,7 +31,7 @@ Function  | Description
 Here is a simple example of using the HX711 on pins A2 and A3 to read a strain gauge and print it's current value:
 
 ```c++
-#include <Q2HX711.h>
+#include <NBHX711.h>
 NBHX711 hx711(A2, A3);
 void setup() {
   Serial.begin(9600);
