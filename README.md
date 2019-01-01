@@ -23,7 +23,7 @@ The **NBHX711** class takes four parameters on construction, the depth of the sa
 Function  | Description
 ------------- | -------------
 **begin** | Sets up the hardware
-**read**  | Returns a long integer that is the current value of the HX711.
+**getRaw** | Returns a long integer that is the most recent raw value of the HX711.
 **update** | Checks for new sample, if available read it into the sample buffer.
 
 ## Example
@@ -42,7 +42,7 @@ void loop() {
   hx711.update();
   if (millis() - lastRead >= 500) {
     lastRead = millis();
-    Serial.println(hx711.read());
+    Serial.println(hx711.getRaw());
   }
 }
 ```
