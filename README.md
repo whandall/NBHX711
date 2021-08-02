@@ -35,6 +35,7 @@ Here is a simple example of using the HX711 on pins A2 and A3 to read a strain g
 NBHX711 hx711(A2, A3);
 void setup() {
   Serial.begin(9600);
+  hx711.begin();
 }
 
 void loop() {
