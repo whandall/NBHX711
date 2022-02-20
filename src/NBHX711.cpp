@@ -10,7 +10,8 @@ NBHX711::NBHX711(byte data, byte clock, byte depth, byte gain) :
 	histBuffer(NULL),
 	curr(0)
 {
-	histSize = 3 * min(max(depth, 6), 255/3);
+	histSize =
+		3 * min(max(depth, static_cast<byte>(6)), static_cast<byte>(255 / 3));
 	histBuffer = new byte[histSize];
 	if (!histBuffer) {
 		histSize = 0;
